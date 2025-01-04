@@ -1,0 +1,209 @@
+---
+title: The invisible persistence of pain
+#title-block-banner: "#132234"
+#css: styles.css
+format:
+  closeread-html:
+    remove-header-space: true
+    cr-style:
+      # narrative-background-color-overlay: "#132234" #darkslategrey
+      # narrative-text-color-overlay: "#e2e2e2"
+      narrative-text-color-sidebar: white
+      narrative-background-color-sidebar: "#132234"
+      section-background-color: rgba(255, 255, 255, 0.2)
+    # cr-section:
+    #   layout: "overlay-left"
+---
+
+<!-- Some days you wake up with pain and maybe on the same day you will go to sleep with pain. Sometimes you suffer in silence, sometimes you cannot contain your despair. -->
+<!-- This pain can last a day a week or even months. -->
+<!-- A pain that last for more than three months we call it "chronic pain".  Chronic pain causes major consequences for the quality of life of the sufferer and a major burden on the health care system.  -->
+
+<!-- C -->
+<!-- body { -->
+<!--   background-image: url("img/points_bg.jpeg"); -->
+<!--   background-size: cover; -->
+<!--   background-attachment: fixed; -->
+<!--   background-repeat: no-repeat; -->
+<!-- } -->
+
+<!-- .content { -->
+<!--   background-image: url("img/points_bg.jpeg"); -->
+<!--   background-color: rgba(255, 255, 255, 0.2); /* semi-transparent white */ -->
+<!--   padding: 20px; -->
+<!--   margin: 20px; -->
+<!--   border-radius: 10px; -->
+<!-- } -->
+<!-- </style> -->
+::: cr-section
+<callout>The invisible persistence of pain </callout> @cr-rovi
+
+<callout>Some days ... </callout> @cr-pain
+
+::: {#cr-pain}
+<callout>... you wake up in pain </callout> ![](img/rovi2.jpg)
+:::
+
+<subcallout> This pain can last more than three months</subcallout> @cr-rovi
+
+<callout>This can be chronic pain</callout>  @cr-rovi
+
+::: {#cr-rovi}
+<center> ![](img/rovi2.jpg)</center>
+:::
+
+<callout>Chronic pain is one of the most underestimated health care problems worldwide</callout> [@cr-globe]{pan-to="5%,5%" scale-by="1.5"}
+
+:::{#cr-globe}
+```{r}
+#| warning: false
+#| 
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+theme_set(theme_bw())
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+ggplot(data = world) +
+  geom_sf() +
+  coord_sf(crs = "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ") +
+  theme(
+    panel.border = element_blank()
+  )
+
+```
+
+:::
+
+<callout>Only in England [<b>one out of three people</b>]{style="color:#f3B45F;"}, suffer from chronic pain</callout> @cr-myimage
+
+:::{#cr-myimage}
+
+![](img/donut_chart_cp.png)
+:::
+
+<callout>If a bee stings us, a signal arrive to the brain, which activates an alarm system, and we feel the pain</callout> @cr-acutepain
+
+<callout>This is acute pain</callout> @cr-acutepain
+
+:::{#cr-acutepain}
+![](img/acute_pain.gif){width=500}
+:::
+
+<callout>When pain is chronic, the brain's alarm system is always on</callout> @cr-chronicpain
+
+<callout> We experience persistent pain</callout> @cr-chronicpain
+
+:::{#cr-chronicpain}
+![](img/chronic_pain.gif){width=500}
+
+:::
+
+<callout>If 100 people suffer of chronic pain</callout> @cr-waffle
+
+<callout>[65 have pain in one area]{style="color:#b3cde3"}</callout> @cr-waffle1
+
+<callout>[21 have pain in two areas]{style="color:#8c96c6"}</callout> @cr-waffle2
+
+<callout> [14 have pain in three or more areas]{style="color:#a27abb"}  in their body </callout> @cr-waffle3
+
+:::{#cr-waffle}
+```{r}
+#| warning: false
+#| message: false
+library(waffle)
+p <- c("Pain in 1 area" = 100)
+       # "Pain in 2 areas" = 21,
+       # "Pain in 3 areas" = 14)
+waffle(p,
+       rows = 10,
+       flip = TRUE,
+       reverse = TRUE,
+       colors = "grey80",  #"#8c96c6", "#a27abb"),
+       #xlab = "1 square represent 1%",
+       legend_pos = "none"
+) +
+  coord_fixed(clip = "off")
+#"#f7907a",
+```
+
+:::
+
+:::{#cr-waffle1}
+```{r}
+#| warning: false
+#| message: false
+library(waffle)
+p <- c("Pain in 1 area" = 65,
+       "grey" = 35)
+       # "Pain in 2 areas" = 21,
+       # "Pain in 3 areas" = 14)
+waffle(p,
+       rows = 10,
+       flip = TRUE,
+       reverse = TRUE,
+       colors = c("#b3cde3","grey80"),  #"#8c96c6", "#a27abb"),
+       #xlab = "1 square represent 1%",
+       legend_pos = "none"
+) +
+  coord_fixed(clip = "off")
+#"#f7907a",
+```
+
+:::
+
+:::{#cr-waffle2}
+```{r}
+#| warning: false
+#| message: false
+library(waffle)
+p <- c("Pain in 1 area" = 65,
+       "Pain in 2 areas" = 21,
+       "grey" = 14)
+       # "Pain in 3 areas" = 14)
+waffle(p,
+       rows = 10,
+       flip = TRUE,
+       reverse = TRUE,
+       colors = c("#b3cde3","#8c96c6","grey80"),  # "#a27abb"),
+       #xlab = "1 square represent 1%",
+       legend_pos = "none"
+) +
+  coord_fixed(clip = "off")
+#"#f7907a",
+```
+
+:::
+
+:::{#cr-waffle3}
+```{r}
+#| warning: false
+#| message: false
+library(waffle)
+p <- c("Pain in 1 area" = 65,
+       "Pain in 2 areas" = 21,
+       "Pain in 3 areas" = 14)
+waffle(p,
+       rows = 10,
+       flip = TRUE,
+       reverse = TRUE,
+       colors = c("#b3cde3","#8c96c6","#a27abb"),
+       #xlab = "1 square represent 1%",
+       legend_pos = "none"
+) +
+  coord_fixed(clip = "off")
+#"#f7907a",
+```
+
+:::
+<callout>Some days...</callout>
+@cr-hybiscus
+
+:::{#cr-hybiscus}
+![](img/hybiscus4.jpg)
+:::
+:::
+
+
+© Rita Giordano 2024
