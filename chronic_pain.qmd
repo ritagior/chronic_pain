@@ -1,7 +1,5 @@
 ---
 title: The invisible persistence of pain
-#title-block-banner: "#132234"
-#css: styles.css
 format:
   closeread-html:
     remove-header-space: true
