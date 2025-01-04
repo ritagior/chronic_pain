@@ -6,35 +6,11 @@ format:
   closeread-html:
     remove-header-space: true
     cr-style:
-      # narrative-background-color-overlay: "#132234" #darkslategrey
-      # narrative-text-color-overlay: "#e2e2e2"
       narrative-text-color-sidebar: white
       narrative-background-color-sidebar: "#132234"
       section-background-color: rgba(255, 255, 255, 0.2)
-    # cr-section:
-    #   layout: "overlay-left"
 ---
 
-<!-- Some days you wake up with pain and maybe on the same day you will go to sleep with pain. Sometimes you suffer in silence, sometimes you cannot contain your despair. -->
-<!-- This pain can last a day a week or even months. -->
-<!-- A pain that last for more than three months we call it "chronic pain".  Chronic pain causes major consequences for the quality of life of the sufferer and a major burden on the health care system.  -->
-
-<!-- C -->
-<!-- body { -->
-<!--   background-image: url("img/points_bg.jpeg"); -->
-<!--   background-size: cover; -->
-<!--   background-attachment: fixed; -->
-<!--   background-repeat: no-repeat; -->
-<!-- } -->
-
-<!-- .content { -->
-<!--   background-image: url("img/points_bg.jpeg"); -->
-<!--   background-color: rgba(255, 255, 255, 0.2); /* semi-transparent white */ -->
-<!--   padding: 20px; -->
-<!--   margin: 20px; -->
-<!--   border-radius: 10px; -->
-<!-- } -->
-<!-- </style> -->
 ::: cr-section
 <callout>The invisible persistence of pain </callout> @cr-rovi
 
