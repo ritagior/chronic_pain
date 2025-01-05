@@ -23,7 +23,7 @@ Some days ...  @cr-rovi
 :::
 
 ::: {#cr-pain}
-![](img/rovi2.jpg)<!-- ... you wake up in pain  -->
+![](img/rovi2.jpg)
 :::
 
 This pain can last more than three months @cr-pain
