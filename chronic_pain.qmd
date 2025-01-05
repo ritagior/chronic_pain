@@ -4,29 +4,33 @@ format:
   closeread-html:
     remove-header-space: true
     cr-style:
+      cr-style:
+      narrative-background-color-overlay: "#132234"
+      narrative-text-color-overlay: "#e2e2e2"
       narrative-text-color-sidebar: white
       narrative-background-color-sidebar: "#132234"
       section-background-color: rgba(255, 255, 255, 0.2)
+      narrative-font-size: 2rem
 ---
 
 ::: cr-section
-<callout>The invisible persistence of pain </callout> @cr-rovi
+The invisible persistence of pain @cr-pain
 
-<callout>Some days ... </callout> @cr-pain
-
-::: {#cr-pain}
-<callout>... you wake up in pain </callout> ![](img/rovi2.jpg)
-:::
-
-<subcallout> This pain can last more than three months</subcallout> @cr-rovi
-
-<callout>This can be chronic pain</callout>  @cr-rovi
+Some days ...  @cr-rovi
 
 ::: {#cr-rovi}
-<center> ![](img/rovi2.jpg)</center>
+![](img/rovi.jpg)
 :::
 
-<callout>Chronic pain is one of the most underestimated health care problems worldwide</callout> [@cr-globe]{pan-to="5%,5%" scale-by="1.5"}
+::: {#cr-pain}
+![](img/rovi2.jpg)<!-- ... you wake up in pain  -->
+:::
+
+This pain can last more than three months @cr-pain
+
+This can be chronic pain  @cr-pain
+
+Chronic pain is one of the most underestimated health care problems worldwide [@cr-globe]{pan-to="5%,5%" scale-by="1.5"}
 
 :::{#cr-globe}
 ```{r}
@@ -47,27 +51,25 @@ ggplot(data = world) +
   )
 
 ```
-
 :::
 
-<callout>Only in England [<b>one out of three people</b>]{style="color:#f3B45F;"}, suffer from chronic pain</callout> @cr-myimage
+<callout>Only in England [<b>one out of three people</b>]{style="color:#f3B45F;"} suffer from chronic pain</callout> @cr-myimage
 
 :::{#cr-myimage}
-
 ![](img/donut_chart_cp.png)
 :::
 
-<callout>If a bee stings us, a signal arrive to the brain, which activates an alarm system, and we feel the pain</callout> @cr-acutepain
+If a bee stings us, a signal arrive to the brain, which activates an alarm system, and we feel the pain @cr-acutepain
 
-<callout>This is acute pain</callout> @cr-acutepain
+This is acute pain @cr-acutepain
 
 :::{#cr-acutepain}
 ![](img/acute_pain.gif){width=500}
 :::
 
-<callout>When pain is chronic, the brain's alarm system is always on</callout> @cr-chronicpain
+When pain is chronic, the brain's alarm system is always on @cr-chronicpain
 
-<callout> We experience persistent pain</callout> @cr-chronicpain
+We experience persistent pain @cr-chronicpain
 
 :::{#cr-chronicpain}
 ![](img/chronic_pain.gif){width=500}
@@ -88,20 +90,15 @@ ggplot(data = world) +
 #| message: false
 library(waffle)
 p <- c("Pain in 1 area" = 100)
-       # "Pain in 2 areas" = 21,
-       # "Pain in 3 areas" = 14)
 waffle(p,
        rows = 10,
        flip = TRUE,
        reverse = TRUE,
-       colors = "grey80",  #"#8c96c6", "#a27abb"),
-       #xlab = "1 square represent 1%",
+       colors = "grey80",
        legend_pos = "none"
 ) +
   coord_fixed(clip = "off")
-#"#f7907a",
 ```
-
 :::
 
 :::{#cr-waffle1}
@@ -111,20 +108,15 @@ waffle(p,
 library(waffle)
 p <- c("Pain in 1 area" = 65,
        "grey" = 35)
-       # "Pain in 2 areas" = 21,
-       # "Pain in 3 areas" = 14)
 waffle(p,
        rows = 10,
        flip = TRUE,
        reverse = TRUE,
-       colors = c("#b3cde3","grey80"),  #"#8c96c6", "#a27abb"),
-       #xlab = "1 square represent 1%",
+       colors = c("#b3cde3","grey80"), 
        legend_pos = "none"
 ) +
   coord_fixed(clip = "off")
-#"#f7907a",
 ```
-
 :::
 
 :::{#cr-waffle2}
@@ -135,19 +127,15 @@ library(waffle)
 p <- c("Pain in 1 area" = 65,
        "Pain in 2 areas" = 21,
        "grey" = 14)
-       # "Pain in 3 areas" = 14)
 waffle(p,
        rows = 10,
        flip = TRUE,
        reverse = TRUE,
-       colors = c("#b3cde3","#8c96c6","grey80"),  # "#a27abb"),
-       #xlab = "1 square represent 1%",
+       colors = c("#b3cde3","#8c96c6","grey80"), 
        legend_pos = "none"
 ) +
   coord_fixed(clip = "off")
-#"#f7907a",
 ```
-
 :::
 
 :::{#cr-waffle3}
@@ -163,16 +151,12 @@ waffle(p,
        flip = TRUE,
        reverse = TRUE,
        colors = c("#b3cde3","#8c96c6","#a27abb"),
-       #xlab = "1 square represent 1%",
        legend_pos = "none"
 ) +
   coord_fixed(clip = "off")
-#"#f7907a",
 ```
-
 :::
-<callout>Some days...</callout>
-@cr-hybiscus
+Some days... @cr-hybiscus
 
 :::{#cr-hybiscus}
 ![](img/hybiscus4.jpg)
@@ -180,4 +164,4 @@ waffle(p,
 :::
 
 
-© Rita Giordano 2024
+© Rita Giordano 2024-2025

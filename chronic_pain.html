@@ -51,9 +51,12 @@ ul.task-list li input[type="checkbox"] {
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-background-color-sidebar: #132234;
---cr-narrative-text-color-sidebar: white;
+          --cr-narrative-background-color-overlay: #132234;
 --cr-section-background-color: rgba(255, 255, 255, 0.2);
+--cr-narrative-background-color-sidebar: #132234;
+--cr-narrative-font-size: 2rem;
+--cr-narrative-text-color-overlay: #e2e2e2;
+--cr-narrative-text-color-sidebar: white;
         }
       </style>
     
@@ -77,74 +80,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- Some days you wake up with pain and maybe on the same day you will go to sleep with pain. Sometimes you suffer in silence, sometimes you cannot contain your despair. -->
-<!-- This pain can last a day a week or even months. -->
-<!-- A pain that last for more than three months we call it "chronic pain".  Chronic pain causes major consequences for the quality of life of the sufferer and a major burden on the health care system.  -->
-<!-- C -->
-<!-- body { -->
-<!--   background-image: url("img/points_bg.jpeg"); -->
-<!--   background-size: cover; -->
-<!--   background-attachment: fixed; -->
-<!--   background-repeat: no-repeat; -->
-<!-- } -->
-<!-- .content { -->
-<!--   background-image: url("img/points_bg.jpeg"); -->
-<!--   background-color: rgba(255, 255, 255, 0.2); /* semi-transparent white */ -->
-<!--   padding: 20px; -->
-<!--   margin: 20px; -->
-<!--   border-radius: 10px; -->
-<!-- } -->
-<!-- </style> -->
 <div class="cr-section cr-column-screen sidebar-left">
 <div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-pain">
+<div class="narrative">
+<p>The invisible persistence of pain</p>
+</div>
+</div>
 <div class="trigger new-trigger" data-focus-on="cr-rovi">
 <div class="narrative">
-<p><callout>The invisible persistence of pain </callout></p>
+<p>Some days …</p>
 </div>
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-pain">
 <div class="narrative">
-<p><callout>Some days … </callout></p>
+<p>This pain can last more than three months</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-rovi">
+<div class="trigger new-trigger" data-focus-on="cr-pain">
 <div class="narrative">
-<p><subcallout> This pain can last more than three months</subcallout></p>
+<p>This can be chronic pain</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-rovi">
+<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="5%,5%" data-focus-on="cr-globe">
 <div class="narrative">
-<p><callout>This can be chronic pain</callout></p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-globe" data-pan-to="5%,5%" data-scale-by="1.5">
-<div class="narrative">
-<p><callout>Chronic pain is one of the most underestimated health care problems worldwide</callout></p>
+<p>Chronic pain is one of the most underestimated health care problems worldwide</p>
 </div>
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-myimage">
 <div class="narrative">
-<p><callout>Only in England <span style="color:#f3B45F;"><b>one out of three people</b></span>, suffer from chronic pain</callout></p>
+<p><callout>Only in England <span style="color:#f3B45F;"><b>one out of three people</b></span> suffer from chronic pain</callout></p>
 </div>
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-acutepain">
 <div class="narrative">
-<p><callout>If a bee stings us, a signal arrive to the brain, which activates an alarm system, and we feel the pain</callout></p>
+<p>If a bee stings us, a signal arrive to the brain, which activates an alarm system, and we feel the pain</p>
 </div>
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-acutepain">
 <div class="narrative">
-<p><callout>This is acute pain</callout></p>
+<p>This is acute pain</p>
 </div>
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-chronicpain">
 <div class="narrative">
-<p><callout>When pain is chronic, the brain’s alarm system is always on</callout></p>
+<p>When pain is chronic, the brain’s alarm system is always on</p>
 </div>
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-chronicpain">
 <div class="narrative">
-<p><callout> We experience persistent pain</callout></p>
+<p>We experience persistent pain</p>
 </div>
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-waffle">
@@ -169,19 +154,17 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-hybiscus">
 <div class="narrative">
-<p><callout>Some days…</callout> </p>
+<p>Some days…</p>
 </div>
 </div>
 </div>
 <div class="sticky-col">
 <div class="sticky-col-stack">
-<div id="cr-pain" class="sticky">
-<p><callout>… you wake up in pain </callout> <img src="img/rovi2.jpg" class="img-fluid"></p>
-</div>
 <div id="cr-rovi" class="sticky">
-<center>
-<img src="img/rovi2.jpg" class="img-fluid">
-</center>
+<p><img src="img/rovi.jpg" class="img-fluid"></p>
+</div>
+<div id="cr-pain" class="sticky">
+<p><img src="img/rovi2.jpg" class="img-fluid"><!-- ... you wake up in pain  --></p>
 </div>
 <div id="cr-globe" class="sticky">
 <div class="cell">
@@ -233,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>© Rita Giordano 2024</p>
+<p>© Rita Giordano 2024-2025</p>
 
 </main>
 <!-- /main column -->

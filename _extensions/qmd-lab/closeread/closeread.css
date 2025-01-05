@@ -6,9 +6,6 @@
   padding-block-start: 10svh !important;
 }
 */
-
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 .cr-section {
   display: grid;
   grid-template-rows: 1fr;
@@ -253,7 +250,7 @@ body.cr-removeheaderspace #quarto-content main#quarto-document-content .quarto-t
 
 /* configurable style variables. use bootstrap variables where possible */
 :root {
-  --cr-narrative-background-color-overlay: #132234;/*#708090e1;*/
+  --cr-narrative-background-color-overlay: #708090e1;
   --cr-narrative-text-color-overlay: white;
   --cr-narrative-background-color-sidebar: transparent;
   --cr-narrative-text-color-sidebar: black;
@@ -265,25 +262,7 @@ body.cr-removeheaderspace #quarto-content main#quarto-document-content .quarto-t
   --cr-narrative-font-size: 1.15rem;
   --cr-poem-font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --cr-narrative-sidebar-width: 1fr;
-  --cr-section-background-color: #132234;/*lightgrey;*/
+  --cr-section-background-color: lightgrey;
 }
 
 /*# sourceMappingURL=closeread.css.map */
-
-callout {
-  font-size: 40vw;
-  font-family: 'Atkinson Hyperlegible';
-}
-
-
-
-
-subcallout {
-  font-size: 7.8vw;
-  font-family: 'Atkinson Hyperlegible';
-}
-
-readout{
-  font-size: 2vw;
-  font-family: 'Atkinson Hyperlegible';
-}
